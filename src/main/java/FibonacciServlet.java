@@ -3,11 +3,12 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 public class FibonacciServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest req, HttpServletResponse res)
-            throws IOException {
 
-        PrintWriter out = res.getWriter();
-        res.setContentType("text/html");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
 
         int a = 0, b = 1;
 
